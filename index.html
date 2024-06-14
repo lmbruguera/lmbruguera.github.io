@@ -10,26 +10,26 @@
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand" href="index.html">Portfolio</a>
+        <a class="navbar-brand" href="#">Portfolio</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
+                    <a class="nav-link" href="#" onclick="loadContent('home.html')">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="about.html">About</a>
+                    <a class="nav-link" href="#" onclick="loadContent('about.html')">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="skills.html">Skills</a>
+                    <a class="nav-link" href="#" onclick="loadContent('skills.html')">Skills</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="projects.html">Projects</a>
+                    <a class="nav-link" href="#" onclick="loadContent('projects.html')">Projects</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="contact.html">Contact</a>
+                    <a class="nav-link" href="#" onclick="loadContent('contact.html')">Contact</a>
                 </li>
                 <li class="nav-item">
                     <button id="lang-en" class="btn btn-link text-light">EN</button>
@@ -41,18 +41,20 @@
         </div>
     </nav>
 
-    <!-- Home Section -->
-    <section id="home" class="container text-center mt-5">
-        <h1 class="lang-en">Welcome to My Programming Portfolio</h1>
-        <h1 class="lang-pt d-none">Bem-vindo ao Meu Portfólio de Programação</h1>
-        <p class="lang-en">Hi, I'm [Your Name], a passionate programmer skilled in various languages and platforms. Explore my projects and skills.</p>
-        <p class="lang-pt d-none">Olá, eu sou [Seu Nome], um programador apaixonado, habilidoso em várias linguagens e plataformas. Explore meus projetos e habilidades.</p>
-        <a href="resume.pdf" class="btn btn-primary" target="_blank">View My Resume</a>
-    </section>
+    <!-- Dynamic Content -->
+    <div id="content" class="container mt-5">
+        <!-- Content will be loaded here -->
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="scripts.js"></script>
+    <script>
+        // Load default content (home.html) on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            loadContent('home.html');
+        });
+    </script>
 </body>
 </html>
